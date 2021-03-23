@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Hero from '../components/hero'
 import Container from '../components/container'
 import Contents from '../components/contents'
-import SlideOvers from '../components/slideovers'
 
 export default function Index() {
     return (

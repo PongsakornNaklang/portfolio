@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const Hero = () => {
     return (
@@ -28,18 +29,50 @@ const Hero = () => {
                 </svg>
             </span>
 
-            <Image
-                className='rounded-full mx-auto'
-                src="/images/profile.jpg"
-                loading='lazy'
-                alt="Me"
-                draggable='false'
-                width={200}
-                height={200}
-            />
+            <motion.figure
+                initial={{ opacity: 0, scale: 0.3 }}
+                animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: 1,
+                }}
+                transition={{ delay: 0.1 }}
+            >
+                <Image
+                    className='rounded-full mx-auto'
+                    src="/images/profile.jpg"
+                    loading='lazy'
+                    alt="Me"
+                    draggable='false'
+                    width={200}
+                    height={200}
+                />
+            </motion.figure>
 
-            <p className="mt-4 text-3xl leading-8 text-gray-500 uppercase">Hello, I'm <div className='font-bold text-gray-900'>PONGSAKORN NAKLANG</div> ;</p>
-            <p className="mt-4 text-indigo-600 font-semibold uppercase">Software developer</p>
+
+            <motion.p
+                className="mt-4 text-3xl leading-8 text-gray-500 uppercase"
+                initial={{ opacity: 0, scale: 0.3 }}
+                animate={{
+                    scale: 1,
+                    opacity: 1,
+                }}
+                transition={{ delay: 0.5 , duration: 1}}
+            >
+                Hello, I'm
+                <div className='font-bold text-gray-900'>PONGSAKORN NAKLANG</div>
+                ;
+            </motion.p>
+            <motion.p
+                className="mt-4 text-indigo-600 font-semibold uppercase"
+                initial={{ opacity: 0, scale: 0.3 }}
+                animate={{
+                    scale: 1,
+                    opacity: 1,
+                }}
+                transition={{ delay: 1, duration: 1 }}
+            >
+                Software developer
+            </motion.p>
         </div>
     )
 }
