@@ -10,3 +10,4 @@ Develop with :
 - [Next.js](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/)
+- [Swiper JS](https://swiperjs.com/)

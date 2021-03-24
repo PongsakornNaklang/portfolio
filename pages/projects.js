@@ -4,14 +4,19 @@ import Container from "../components/container"
 import { useRouter } from 'next/router'
 import ProjectCard from "../components/project_card"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import SwiperCore, { EffectCoverflow } from 'swiper';
+
+import 'swiper/swiper.min.css';
+import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
+
+SwiperCore.use([EffectCoverflow])
 
 const Projects = () => {
     const router = useRouter()
     return (
         <motion.div
             layoutId={`projects-svg-box`}
-            className='bg-indigo-500 h-screen w-screen pt-10'
+            className='bg-indigo-500 h-screen w-screen pt-4'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
@@ -30,7 +35,7 @@ const Projects = () => {
                         transition={{ delay: 0.5, duration: 1 }}
                     >
                         <motion.button
-                            className="py-4 px-4 rounded-full items-center bg-indigo-900 text-white focus:outline-none"
+                            className="py-3 px-3 rounded-full items-center bg-indigo-900 text-white focus:outline-none"
                             whileHover={{ scale: 1.25 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => router.push('/')}
@@ -62,35 +67,50 @@ const Projects = () => {
                     </motion.p>
                     </div>
                 </div>
+            </Container>
 
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, scale: [0.8, 1] }}
+                transition={{ delay: 1.9, duration: 0.2 }}
+            >
                 <Swiper
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
+                    className='w-full pt-10 pb-10'
+                    effect='coverflow'
+                    spaceBetween={20}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    pagination={{
+                        el: '.swiper-pagination',
+                    }}
                 >
-                    <SwiperSlide>
+                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
                 </Swiper>
+            </motion.div>
 
-
-            </Container>
-
-        </motion.div>
+        </motion.div >
     )
 }
 

@@ -1,15 +1,14 @@
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const ProjectCard = () => {
     return (
-        <motion.div
-            className='h-96 max-w-full bg-white rounded-3xl mt-10'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, scale: [0.9, 1] }}
-            transition={{ delay: 1.9, duration: 0.5 }}
+        <div
+            className=' bg-blue-gray-900 rounded-3xl pt-4 pr-4 pb-4 pl-4'
+            style={{ maxWidth: 900, height: '66vh' }}
         >
-
-        </motion.div>
+            <Image src='/images/Screen.png' height={300} width={400} />
+        </div>
     )
 }
 
