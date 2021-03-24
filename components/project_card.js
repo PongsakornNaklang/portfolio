@@ -7,7 +7,7 @@ const ProjectCard = () => {
             className=' bg-blue-gray-900 rounded-3xl pt-4 pr-4 pb-4 pl-4'
             style={{ maxWidth: 900, height: '66vh' }}
         >
-            <Image src='/images/Screen.png' height={300} width={400} />
+            {/* <Image src='/images/Screen.png' height={300} width={400} /> */}
         </div>
     )
 }

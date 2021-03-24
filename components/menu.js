@@ -36,6 +36,7 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                         <motion.p
                             layoutId={`${link}-title`}
                             className="ml-20 text-lg leading-4 font-medium text-gray-900 "
+                            initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
                         >
