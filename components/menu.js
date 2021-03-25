@@ -1,21 +1,17 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { useState } from "react"
 
 const Menu = ({ title, subtitle, svgPath, link }) => {
-    const [isHoverMenu, setIsHoverMenu] = useState(false)
 
     return (
         <Link href={`/${link}`} passHref>
             <motion.div
                 className="relative cursor-pointer items-center"
-                style={{ width: 330, }}
+                style={{ width: 330,height:56 }}
             >
                 <motion.figure
                     whileHover={{ scale: 1.25 }}
                     whileTap={{ scale: 0.9 }}
-                    onHoverStart={() => setIsHoverMenu(true)}
-                    onHoverEnd={() => setIsHoverMenu(false)}
                 >
                     <dt>
                         <motion.div
@@ -23,12 +19,11 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.2 }}
-                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md ${isHoverMenu ? 'bg-indigo-900' : 'bg-indigo-500'}  text-white `}
+                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500  text-white `}
                         >
                             <motion.svg
-                                transition={{ duration: 0.5 }}
                                 layoutId={`${link}-svg`}
-                                className={`h-8 w-8 ${isHoverMenu ? 'animate-pulse' : ''} `} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                className={`h-8 w-8 animate-pulse`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             >
                                 {svgPath}
                             </motion.svg>
@@ -36,9 +31,6 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                         <motion.p
                             layoutId={`${link}-title`}
                             className="ml-20 text-lg leading-4 font-medium text-gray-900 "
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5 }}
                         >
                             {title}
                         </motion.p>

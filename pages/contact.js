@@ -8,7 +8,7 @@ const { ContactSVGPath } = require("../components/svg_path")
 
 const Contact = () => {
     return (
-        <MotionContainer>
+        <MotionContainer path='contact'>
             <Head>
                 <title>Contact</title>
             </Head>

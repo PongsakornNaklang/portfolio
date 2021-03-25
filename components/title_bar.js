@@ -7,11 +7,11 @@ const TitleBar = ({ title, svgPath }) => {
 
     return (
         <div className='inline-flex w-full'>
-            <motion.figure
+            <motion.div
                 className='h-16 w-16 justify-start'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1 }}
+                transition={{ delay: 1, duration: 1 }}
             >
                 <motion.button
                     className="py-3 px-3 rounded-full items-center bg-indigo-900 text-white focus:outline-none"
@@ -24,14 +24,12 @@ const TitleBar = ({ title, svgPath }) => {
                     </svg>
 
                 </motion.button>
-            </motion.figure>
+            </motion.div>
 
             <div className='flex inline-flex justify-end h-18 w-full items-center '>
                 <motion.svg
                     layoutId={`${link}-svg`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    transition={{ duration: 1, delay: 0.2 }}
                     className={`h-8 w-8 text-white `} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                 >
                     {svgPath}
@@ -40,9 +38,7 @@ const TitleBar = ({ title, svgPath }) => {
                 <motion.p
                     layoutId={`${link}-title`}
                     className="ml-6 text-3xl leading-3 font-medium text-white "
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    transition={{ duration: 1, delay: 0.2 }}
                 >
                     {title}
                 </motion.p>

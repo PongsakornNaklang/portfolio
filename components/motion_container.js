@@ -1,9 +1,12 @@
 import { motion } from "framer-motion"
 import {  useRouter } from 'next/router'
 
-const MotionContainer = ({ children }) => {
-    const router = useRouter()
-    const path = router.pathname.split('/')[1]
+const MotionContainer = ({ children,path }) => {
+    // const router = useRouter()
+    // // const path = router.pathname.split('/')[1]
+    // const path = router.pathname.slice(1)
+
+    // console.log(path);
 
     return (
         <motion.div

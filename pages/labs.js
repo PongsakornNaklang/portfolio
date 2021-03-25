@@ -6,7 +6,7 @@ import { LabSVGPath } from "../components/svg_path"
 
 const Labs = () => {
     return (
-        <MotionContainer>
+        <MotionContainer path='labs'>
             <Head>
                 <title>Labs</title>
             </Head>

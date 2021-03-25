@@ -6,7 +6,7 @@ import TitleBar from "../components/title_bar"
 
 const About = () => {
     return (
-        <MotionContainer>
+        <MotionContainer path='about'>
             <Head>
                 <title>About</title>
             </Head>
