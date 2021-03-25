@@ -4,7 +4,7 @@ import Container from "../components/container"
 import { useRouter } from 'next/router'
 import ProjectCard from "../components/project_card"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow } from 'swiper';
+import SwiperCore, { EffectCoverflow, Keyboard, Mousewheel } from 'swiper';
 
 import 'swiper/swiper.min.css';
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
@@ -12,7 +12,7 @@ import MotionContainer from "../components/motion_container"
 import TitleBar from "../components/title_bar"
 import { ProjectSVGPath } from "../components/svg_path"
 
-SwiperCore.use([EffectCoverflow])
+SwiperCore.use([EffectCoverflow, Keyboard, Mousewheel])
 
 const Projects = () => {
     const router = useRouter()
@@ -34,7 +34,7 @@ const Projects = () => {
                 <Swiper
                     className='w-full pt-10 pb-10'
                     effect='coverflow'
-                    spaceBetween={20}
+                    spaceBetween={30}
                     grabCursor={true}
                     centeredSlides={true}
                     slidesPerView={'auto'}
@@ -45,11 +45,15 @@ const Projects = () => {
                         modifier: 1,
                         slideShadows: true,
                     }}
-                    pagination={{
-                        el: '.swiper-pagination',
+                    keyboard={{
+                        enabled: true,
+                        onlyInViewport: false,
+                    }}
+                    mousewheel={{
+                        invert: true,
                     }}
                 >
-                    <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
+                    <SwiperSlide className='rounded-3xl ' style={{ maxWidth: 900, height: '66vh' }}>
                         <ProjectCard />
                     </SwiperSlide>
                     <SwiperSlide className='rounded-3xl' style={{ maxWidth: 900, height: '66vh' }}>
