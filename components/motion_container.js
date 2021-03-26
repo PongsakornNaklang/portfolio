@@ -11,10 +11,10 @@ const MotionContainer = ({ children,path }) => {
     return (
         <motion.div
             layoutId={`${path}-svg-box`}
-            className='bg-indigo-500 h-screen w-screen pt-4'
+            className='bg-indigo-500 h-screen w-full pt-4 bg-pages'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3 }}
         >
             {children}
         </motion.div>

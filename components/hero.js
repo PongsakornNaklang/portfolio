@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const Hero = () => {
     return (
         <motion.div
-            className="text-center"
+            className="text-center py-2 "
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{
                 scale: 1,
@@ -23,7 +23,7 @@ const Hero = () => {
 
             <p className="mt-4 text-2xl font-thin leading-4 text-gray-500 uppercase">Hello, I'm</p>
 
-            <div className='mt-4 text-3xl leading-4 font-bold text-gray-900'>PONGSAKORN NAKLANG</div>
+            <div className='mt-4 text-3xl leading-8 font-bold text-gray-900'>PONGSAKORN NAKLANG</div>
 
             <p className="mt-4 text-3xl font-thin leading-4 text-gray-500 uppercase">;</p>
 

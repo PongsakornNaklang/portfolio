@@ -7,23 +7,23 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
         <Link href={`/${link}`} passHref>
             <motion.div
                 className="relative cursor-pointer items-center"
-                style={{ width: 330,height:56 }}
+                style={{ width: 330, height: 56 }}
             >
-                <motion.figure
+                <motion.div
                     whileHover={{ scale: 1.25 }}
                     whileTap={{ scale: 0.9 }}
                 >
                     <dt>
                         <motion.div
                             layoutId={`${link}-svg-box`}
-                            initial={{ opacity: 0 }}
+                            vinitial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.1 }}
                             className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500  text-white `}
                         >
                             <motion.svg
                                 layoutId={`${link}-svg`}
-                                className={`h-8 w-8 animate-pulse`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                className={`h-8 w-8`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             >
                                 {svgPath}
                             </motion.svg>
@@ -35,13 +35,8 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                             {title}
                         </motion.p>
                     </dt>
-                    <motion.dd
-                        className="mt-2 ml-20 text-base text-gray-500"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1.4 }}
-                    >{subtitle}</motion.dd>
-                </motion.figure>
+                    <dd className="mt-2 ml-20 text-base text-gray-500">{subtitle}</dd>
+                </motion.div>
             </motion.div>
         </Link>
     )

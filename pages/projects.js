@@ -4,7 +4,7 @@ import Container from "../components/container"
 import { useRouter } from 'next/router'
 import ProjectCard from "../components/project_card"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow, Keyboard, Mousewheel } from 'swiper';
+import SwiperCore, { EffectCoverflow, Keyboard, Mousewheel, Pagination } from 'swiper';
 
 import 'swiper/swiper.min.css';
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
@@ -12,7 +12,7 @@ import MotionContainer from "../components/motion_container"
 import TitleBar from "../components/title_bar"
 import { ProjectSVGPath } from "../components/svg_path"
 
-SwiperCore.use([EffectCoverflow, Keyboard, Mousewheel])
+SwiperCore.use([EffectCoverflow, Keyboard, Mousewheel, Pagination])
 
 const Projects = () => {
     const router = useRouter()
@@ -35,6 +35,7 @@ const Projects = () => {
                     className='w-full pt-10 pb-10'
                     effect='coverflow'
                     spaceBetween={30}
+                    loop={true}
                     grabCursor={true}
                     centeredSlides={true}
                     slidesPerView={'auto'}
@@ -51,6 +52,10 @@ const Projects = () => {
                     }}
                     mousewheel={{
                         invert: true,
+                    }}
+                    pagination={{
+                        el: '.swiper-pagination',
+                        type: 'fraction',
                     }}
                 >
                     <SwiperSlide className='rounded-3xl ' style={{ maxWidth: 900, height: '66vh' }}>
@@ -95,9 +100,11 @@ const Projects = () => {
                             desc='Support the user experience of using sport and health center at Suranaree University of Technology'
                             coverSrc='/images/SUT_Sport_and_Health_Center.png'
                             link='http://student.sut.ac.th/b6074562/SUT_SportAndHealthCenter/'
-                            techStack={['PHP','HTML','CSS']}
+                            techStack={['PHP', 'HTML', 'CSS']}
                         />
                     </SwiperSlide>
+
+                    <div className="swiper-pagination text-center mt-6 text-white text-base"></div>
                 </Swiper>
             </motion.div>
 
