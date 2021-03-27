@@ -15,7 +15,7 @@ export default function Index() {
             <Container>
                 <Hero />
                 <Contents />
-                {/* <ThemeToggle /> */}
+                <ThemeToggle />
             </Container>
         </div>
     )

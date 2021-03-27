@@ -4,6 +4,7 @@ import Head from "next/head"
 import Container from "../components/container"
 import TitleBar from "../components/title_bar"
 import { motion } from "framer-motion"
+import ThemeToggle from "../components/theme_toggle"
 
 const About = () => {
     return (
@@ -11,7 +12,7 @@ const About = () => {
             <Head>
                 <title>About</title>
             </Head>
-
+            <ThemeToggle />
             <Container>
                 <TitleBar title='About' svgPath={<AboutSVGPath />} />
 

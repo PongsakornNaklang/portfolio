@@ -5,6 +5,7 @@ import TitleBar from "../components/title_bar"
 import MotionContainer from "../components/motion_container"
 import Image from "next/image"
 import { useTheme } from "next-themes"
+import ThemeToggle from "../components/theme_toggle"
 
 const { ContactSVGPath } = require("../components/svg_path")
 
@@ -15,7 +16,7 @@ const Contact = () => {
             <Head>
                 <title>Contact</title>
             </Head>
-
+            <ThemeToggle />
             <Container>
                 <TitleBar title='Contact' svgPath={<ContactSVGPath />} />
 
