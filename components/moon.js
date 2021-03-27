@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 const Moon = () => {
     return (
-        <motion.svg className='text-yellow-500 h-6 w-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+        <motion.svg className='text-yellow-500 h-7 w-7' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
             layoutId='theme'
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: [0.5,1.3,1], opacity: 1 }}

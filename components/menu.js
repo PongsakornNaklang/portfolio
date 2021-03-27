@@ -15,11 +15,11 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                 >
                     <dt>
                         <motion.div
-                            layoutId={`${link}-svg-box`}
+                            layoutId={ `${link}-svg-box`}
                             vinitial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.1 }}
-                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500  text-white `}
+                            transition={{ duration: 0.5 }}
+                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500 dark:bg-red-accent-200 text-white `}
                         >
                             <motion.svg
                                 layoutId={`${link}-svg`}
