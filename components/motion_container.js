@@ -3,7 +3,7 @@ import ThemeToggle from "./theme_toggle"
 
 const MotionContainer = ({ children, path }) => {
     return (
-        <>
+        <div>
             <motion.div
                 layoutId={`${path}-svg-box`}
                 className='bg-indigo-500 dark:bg-gray-800 h-screen w-full pt-4 bg-pages'
@@ -14,7 +14,7 @@ const MotionContainer = ({ children, path }) => {
                 {children}
             </motion.div>
             <ThemeToggle />
-        </>
+        </div>
     )
 }
 
