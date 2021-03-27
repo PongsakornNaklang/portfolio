@@ -107,7 +107,6 @@ const Projects = () => {
                     <div className="swiper-pagination text-center mt-6 text-white text-base"></div>
                 </Swiper>
             </motion.div>
-
         </MotionContainer>
     )
 }

@@ -14,7 +14,7 @@ const TitleBar = ({ title, svgPath }) => {
                 transition={{ delay: 1, duration: 1 }}
             >
                 <motion.button
-                    className="py-3 px-3 rounded-full items-center bg-indigo-900 text-white focus:outline-none"
+                    className="py-3 px-3 rounded-full items-center bg-indigo-900 dark:bg-gray-900 text-white focus:outline-none"
                     whileHover={{ scale: 1.25 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => router.push('/')}

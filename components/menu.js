@@ -30,7 +30,7 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                         </motion.div>
                         <motion.p
                             layoutId={`${link}-title`}
-                            className="ml-20 text-lg leading-4 font-medium text-gray-900 "
+                            className="ml-20 text-lg leading-4 font-medium text-gray-900 dark:text-white"
                         >
                             {title}
                         </motion.p>

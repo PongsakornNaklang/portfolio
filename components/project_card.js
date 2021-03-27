@@ -7,19 +7,19 @@ const ProjectCard = ({ name = '', desc = '', link = '', techStack = [], coverSrc
 
     return (
         <div
-            className=' bg-blue-gray-900 rounded-3xl '
+            className='bg-gray-600 rounded-3xl '
             style={{ maxWidth: 900, height: '66vh' }}
         >
             {
                 coverSrc.length !== 0 ?
-                    <Image
-                        className='rounded-3xl img-fading-bottom'
-                        src={coverSrc}
-                        layout={'fill'}
-                        quality={100}
-                        objectFit={'cover'}
-                        loading='eager'
-                    /> : null
+                        <Image
+                            className='rounded-3xl img-fading-bottom'
+                            src={coverSrc}
+                            layout={'fill'}
+                            quality={100}
+                            objectFit={'cover'}
+                            loading='eager'
+                        />: null
             }
 
 
