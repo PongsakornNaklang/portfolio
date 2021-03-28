@@ -3,7 +3,7 @@ var mime = require('mime');
 var fs = require('fs');
 
 export default (req, res) => {
-    const dir = path.join(__dirname, 'pages', 'api', 'resume', 'resume2020.pdf');
+    const dir = path.join(__dirname, '_files', 'resume2020.pdf');
     const filename = path.basename(dir);
     const mimetype = mime.getType(dir);
     res.setHeader('Content-disposition', 'attachment; filename=' + filename);

@@ -1,7 +1,7 @@
 {
     "functions": {
         "pages/api/resume/download.js": {
-            "includeFiles": "pages/api/resume/"
+            "includeFiles": "_files/**"
         }
     }
 }
