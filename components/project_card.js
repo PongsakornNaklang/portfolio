@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { LinkSVGPath } from "./svg_path"
+import SvgPath from "./svg_path"
 import Link from 'next/link'
 
 const ProjectCard = ({ name = '', desc = '', link = '', techStack = [], coverSrc = '' }) => {
@@ -39,7 +39,7 @@ const ProjectCard = ({ name = '', desc = '', link = '', techStack = [], coverSrc
                                     whileHover={{ scale: 1.25, cursor: 'pointer' }}
                                     whileTap={{ scale: 0.9 }}
                                     className='h-6 w-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <LinkSVGPath />
+                                    {SvgPath.link}
                                 </motion.svg>
                             </Link>
                             : null

@@ -1,4 +1,4 @@
-import { AboutSVGPath } from "../components/svg_path"
+import SvgPath from "../components/svg_path"
 import MotionContainer from "../components/motion_container"
 import Head from "next/head"
 import Container from "../components/container"
@@ -14,7 +14,7 @@ const About = () => {
             </Head>
             <ThemeToggle />
             <Container>
-                <TitleBar title='About' svgPath={<AboutSVGPath />} />
+                <TitleBar title='About' svgPath={SvgPath.about} />
 
                 <motion.div
                     className="bg-white dark:bg-gray-700 shadow rounded-lg mt-4 overflow-auto"
@@ -56,7 +56,7 @@ const About = () => {
                                 <dt className="text-sm font-medium text-gray-500 dark:text-gray-300">Experience</dt>
                                 <dd className="mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2 space-y-4">
                                     <div>
-                                        <p>July – Nov. 2020, Seagate Technology (Thailand) Ltd., Nakhon Ratchasima, Programmer</p>
+                                        <p>July – Nov. 2020, Seagate Technology (Thailand) Ltd., Nakhon Ratchasima, Intern Programmer</p>
                                         <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
                                             <li>Build and develop application help business archive a goal, focus on real time streaming data platform.</li>
                                         </ul>
@@ -94,7 +94,7 @@ const About = () => {
                                                 <span className="ml-2 flex-1 w-0 truncate">resume.pdf</span>
                                             </div>
                                             <div className="ml-4 flex-shrink-0">
-                                                <a href='/api/resume/download' className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-red-accent-100">Download</a>
+                                                <a href='/files/resume.pdf' download className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-red-accent-100">Download</a>
                                             </div>
                                         </li>
                                     </ul>

@@ -1,5 +1,5 @@
 import Menu from "./menu";
-import { ProjectSVGPath, AboutSVGPath, LabSVGPath, ContactSVGPath } from "./svg_path";
+import SvgPath from "./svg_path";
 
 const Contents = () => {
     
@@ -10,26 +10,26 @@ const Contents = () => {
                 <Menu
                     title={'Projects'}
                     subtitle={'Web / Mobile application'}
-                    svgPath={<ProjectSVGPath />}
+                    svgPath={SvgPath.project}
                     link={'projects'}
                 />
 
                 <Menu
                     title={'About'}
                     subtitle={'Experience / Skills / Education'}
-                    svgPath={<AboutSVGPath />}
+                    svgPath={SvgPath.about}
                     link={'about'}
                 />
                 <Menu
                     title={'Labs'}
                     subtitle={'🚧'}
-                    svgPath={<LabSVGPath />}
+                    svgPath={SvgPath.lab}
                     link={'labs'}
                 />
                 <Menu
                     title={'Contact'}
                     subtitle={'Email / Github / Facebook'}
-                    svgPath={<ContactSVGPath />}
+                    svgPath={SvgPath.contact}
                     link={'contact'}
                 />
             </dl>

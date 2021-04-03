@@ -10,7 +10,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
 import MotionContainer from "../components/motion_container"
 import TitleBar from "../components/title_bar"
-import { ProjectSVGPath } from "../components/svg_path"
+import SvgPath from "../components/svg_path"
 import ThemeToggle from "../components/theme_toggle"
 
 SwiperCore.use([EffectCoverflow, Keyboard, Mousewheel, Pagination])
@@ -24,7 +24,7 @@ const Projects = () => {
             </Head>
             <ThemeToggle />
             <Container>
-                <TitleBar title='Projects' svgPath={<ProjectSVGPath />} />
+                <TitleBar title='Projects' svgPath={SvgPath.project} />
             </Container>
 
             <motion.div

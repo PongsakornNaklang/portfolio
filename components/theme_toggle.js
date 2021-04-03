@@ -5,6 +5,10 @@ import { motion } from 'framer-motion'
 
 const ThemeToggle = () => {
     const { theme, setTheme } = useTheme()
+    const icon = {
+        dark: <Sun />,
+        light: <Moon />
+    }
 
     return (
         <div className='fixed bottom-10 right-10 rounded-full shadow-2xl z-10'>
@@ -15,9 +19,7 @@ const ThemeToggle = () => {
                 className="py-4 px-4  items-center rounded-full bg-gray-800 dark:bg-white focus:outline-none"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
-                {
-                    theme === 'dark' ? < Sun /> : <Moon />
-                }
+                {icon[theme]}
             </motion.button>
         </div>
 

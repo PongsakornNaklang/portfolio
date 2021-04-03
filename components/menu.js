@@ -19,7 +19,7 @@ const Menu = ({ title, subtitle, svgPath, link }) => {
                             vinitial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500 dark:bg-red-accent-200 text-white `}
+                            className={`absolute flex items-center justify-center h-14 w-14 rounded-md bg-indigo-500 dark:bg-red-accent-200 text-white overflow-hidden`}
                         >
                             <motion.svg
                                 layoutId={`${link}-svg`}
