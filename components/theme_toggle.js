@@ -7,7 +7,8 @@ const ThemeToggle = () => {
     const { theme, setTheme } = useTheme()
     const icon = {
         dark: <Sun />,
-        light: <Moon />
+        light: <Moon />,
+        null:  <Moon />
     }
 
     return (
