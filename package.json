@@ -1,21 +1,29 @@
 {
-  "name": "port-of-me",
-  "version": "0.1.0",
+  "name": "pongsakornn.github.io",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export && touch > out/.nojekyll",
+    "serve": "npm run export && serve out",
+    "deploy": "npm run export && node gh-pages.js"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "framer-motion": "^4.0.0",
+    "gh-pages": "^3.1.0",
     "mime": "^2.5.2",
+    "moment": "^2.29.1",
     "next": "10.0.9",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
     "next-themes": "^0.0.14",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.32.8",
+    "serve": "^11.3.2",
     "swiper": "^6.5.0"
   },
   "devDependencies": {
