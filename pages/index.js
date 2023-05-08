@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Hero from '../components/hero'
 import Container from '../components/container'
-import Contents from '../components/contents'
 import ThemeToggle from '../components/theme_toggle'
 import { motion } from "framer-motion"
 
