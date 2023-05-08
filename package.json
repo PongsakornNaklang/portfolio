@@ -9,19 +9,20 @@
     },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
+        "caniuse-lite": "^1.0.30001486",
         "framer-motion": "^4.0.0",
-        "mime": "^2.5.2",
-        "next": "10.0.9",
-        "next-themes": "^0.0.14",
-        "react": "17.0.1",
-        "react-dom": "17.0.1",
-        "sass": "^1.32.8",
-        "swiper": "^6.5.0"
+        "mime": "^3.0.0",
+        "next": "^10.0.9",
+        "next-themes": "^0.2.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sass": "^1.62.1",
+        "swiper": "^9.2.4"
     },
     "devDependencies": {
-        "autoprefixer": "^10.2.5",
-        "postcss": "^8.2.8",
-        "tailwindcss": "^2.0.3"
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.23",
+        "tailwindcss": "^3.3.2"
     },
     "description": "![Image of Screen](https://github.com/PongsakornNaklang/portfolio/blob/main/public/images/Screen.png)",
     "main": "postcss.config.js",

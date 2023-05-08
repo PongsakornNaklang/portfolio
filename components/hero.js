@@ -21,17 +21,15 @@ const Hero = () => {
                     src="/images/profile.jpg"
                     alt="Me"
                     draggable='false'
-                    width={200}
-                    height={200}
+                    width={150}
+                    height={150}
                 />
 
                 <p className="mt-4 text-2xl font-thin leading-4 text-gray-500 uppercase">Hello, I'm</p>
 
                 <div className='mt-4 text-3xl leading-8 font-bold text-gray-900 dark:text-white'>PONGSAKORN NAKLANG</div>
 
-                <p className="mt-4 text-3xl font-thin leading-4 text-gray-500 uppercase">;</p>
-
-                <p className="mt-4 text-indigo-600 dark:text-red-accent-100 font-semibold uppercase">Software developer</p>
+                <p className="mt-4 text-indigo-600 dark:text-red-accent-100 font-semibold uppercase">Junior Software developer 👨‍💻</p>
 
             </motion.div>
         </div>
