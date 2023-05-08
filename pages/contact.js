@@ -59,14 +59,6 @@ const Contact = () => {
 
                             <a href='https://github.com/PongsakornNaklang/' target='_blank' className="text-lg text-gray-900 dark:text-gray-200 col-span-5">PongsakornNaklang</a>
                         </div>
-                        <div className="grid grid-cols-6 auto-cols-max items-center">
-                            <Image className='' src='/images/telephone.svg' height={30} width={30} />
-                            <a href='tel:097-124-0007' className="text-lg text-gray-900 dark:text-gray-200 col-span-5">097-124-0007</a>
-                        </div>
-                        <div className="grid grid-cols-6 auto-cols-max items-center">
-                            <Image className='' src='/images/line.svg' height={30} width={30} />
-                            <Image className='col-span-5' src='/images/qr.jpg' layout='responsive' height={56} width={56} />
-                        </div>
                     </div>
                 </motion.div>
             </Container >
